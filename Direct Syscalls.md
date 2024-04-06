@@ -7,7 +7,6 @@ Ring 1 and 2 are very rarely used. Most applications running on your computer ru
 The Windows Operating System only uses Ring 0 and 3, to maintain compatibility with other architectures such as ARM, which only implement two protection modes, **Kernel mode** and **User Mode**. 
 You see, your programs run in user mode but sometimes they need to do some fancy stuff that requires special permissions. That's where syscalls come in, acting as your middleman to request those privileged operations from the kernel, which runs in kernel mode.
 ## Fucking Syscalls, how do they work ?
-![[./Notes/Maldev/Syscalls/Resources/Insane_Clown_Posse.bmp|Insane_Clown_Posse.bmp]]
 
 When you call a function like *WriteFile*, the windows API will then call the Native API, which will then call the syscall instruction for you, which will then put the processor in kernel mode and execute what you need. 
 Here's a handy image i shamelessly stolen from RedOps.at blog : 
