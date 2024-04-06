@@ -193,9 +193,3 @@ https://www.unknowncheats.me/forum/general-programming-and-reversing/190128-inme
 
 
 
-
-## Pain zone
->You might notice *NT Headers* is plural, that is because there's two different structures in the NT Headers, the *File Header* and the *Optional Header*, which is only present in **PE Image** files (like dynamic libraries and executables), and not in Objects (meaning static libraries for exemple). 
-
-> In the File header, there is a field named *SizeOfOptionalHeader* containing the size of the optional header in bytes.
-However, in my code,  I am not really considering it, as i am not trying to make a PE File parser (although that would be kinda cool) but i mostly just want to read NTDLL and eventually some other DLLs, so i don't mind not having the most flexible code and just consider it present . 
